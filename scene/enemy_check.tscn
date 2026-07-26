@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://0s5khsg1wi2m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ymh6p"]
+radius = 18.0
+height = 54.0
+
+[node name="enemy_check" type="Area2D" unique_id=951457924]
+collision_layer = 4
+collision_mask = 4
+
+[node name="ENEMYCOLLISON" type="CollisionShape2D" parent="." unique_id=1344409128]
+shape = SubResource("CapsuleShape2D_ymh6p")
+debug_color = Color(0.9286163, 3.3691525e-05, 0.6659409, 0.41960785)

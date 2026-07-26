@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ph23qkaueao2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ymh6p"]
+radius = 343.01312
+
+[node name="player_detect_move" type="Area2D" unique_id=879220144]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1130341914]
+position = Vector2(2, 1)
+shape = SubResource("CircleShape2D_ymh6p")
+debug_color = Color(0.53180885, 0.5362683, 0.5413812, 0.41960785)
