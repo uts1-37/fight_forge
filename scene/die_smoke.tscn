@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c28tjplplnvuj"]
+
+[ext_resource type="Texture2D" uid="uid://dbd3sxcpw4glt" path="res://FX001/FX001_01.png" id="1_piw8d"]
+[ext_resource type="Script" uid="uid://b0nvd8a2hkyvk" path="res://script/die_smoke.gd" id="1_sdvlf"]
+[ext_resource type="Texture2D" uid="uid://de7opkhu16vk3" path="res://FX001/FX001_02.png" id="2_sdvlf"]
+[ext_resource type="Texture2D" uid="uid://brb1rsg3xfalc" path="res://FX001/FX001_03.png" id="3_mbbqf"]
+[ext_resource type="Texture2D" uid="uid://cs26lhhssv3ls" path="res://FX001/FX001_04.png" id="4_v11ei"]
+[ext_resource type="Texture2D" uid="uid://conbl73g00226" path="res://FX001/FX001_05.png" id="5_ucltk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymh6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_piw8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sdvlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mbbqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v11ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ucltk")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 5.0
+}]
+
+[node name="die_smoke" type="Node2D" unique_id=1576428831]
+script = ExtResource("1_sdvlf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=101846179]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ymh6p")
+animation = &"die"

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cmq24bpr083xl"]
+
+[ext_resource type="Script" uid="uid://gwbc7wrcpx7y" path="res://script/player_die_smoke.gd" id="1_s0l5u"]
+[ext_resource type="Texture2D" uid="uid://dbd3sxcpw4glt" path="res://FX001/FX001_01.png" id="2_j0apo"]
+[ext_resource type="Texture2D" uid="uid://de7opkhu16vk3" path="res://FX001/FX001_02.png" id="3_7trjj"]
+[ext_resource type="Texture2D" uid="uid://brb1rsg3xfalc" path="res://FX001/FX001_03.png" id="4_bkyjl"]
+[ext_resource type="Texture2D" uid="uid://cs26lhhssv3ls" path="res://FX001/FX001_04.png" id="5_5jexe"]
+[ext_resource type="Texture2D" uid="uid://conbl73g00226" path="res://FX001/FX001_05.png" id="6_tidug"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymh6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j0apo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7trjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bkyjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5jexe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tidug")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 5.0
+}]
+
+[node name="player_die_smoke" type="Node2D" unique_id=1464394648]
+script = ExtResource("1_s0l5u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=522694372]
+modulate = Color(0.9999998, 0.027178088, 0.33586872, 1)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_ymh6p")
+animation = &"die"

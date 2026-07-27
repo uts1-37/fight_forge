@@ -29,6 +29,10 @@ region = Rect2(768, 384, 192, 192)
 atlas = ExtResource("1_h08p8")
 region = Rect2(960, 384, 192, 192)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bka5"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(0, 0, 192, 192)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgurf"]
 atlas = ExtResource("1_h08p8")
 region = Rect2(0, 0, 192, 192)
@@ -97,6 +101,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1e552")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bka5")
 }],
 "loop": 0,
 "name": &"attack",
@@ -153,9 +160,196 @@ animations = [{
 radius = 14.0
 height = 34.0
 
+[sub_resource type="Animation" id="Animation_b7koy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ulb22"]
+resource_name = "attack"
+step = 0.05
+
+[sub_resource type="Animation" id="Animation_1e552"]
+resource_name = "die"
+length = 0.12000000000000001
+step = 0.06
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.11764706),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.18179765, 0.18179768, 0.18179768, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6)]
+}
+
+[sub_resource type="Animation" id="Animation_yvcfn"]
+resource_name = "hurt"
+length = 0.12000000000000001
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.82635856, 0.33199325, 0.5224471, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ulb22"]
+_data = {
+&"RESET": SubResource("Animation_b7koy"),
+&"attack": SubResource("Animation_ulb22"),
+&"die": SubResource("Animation_1e552"),
+&"hurt": SubResource("Animation_yvcfn")
+}
+
+[sub_resource type="Animation" id="Animation_vgurf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37, -22.999998)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.2244436]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kqmod"]
+resource_name = "attack"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-37, -22.999998), Vector2(-37, -22.999998), Vector2(-37, -22.999998), Vector2(-37, -22.999998), Vector2(42, 25.999998), Vector2(42, 25.999998)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.2244436, -0.2244436, -0.2244436, -0.2244436, 1.8630917, 1.8630917]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqle"]
+_data = {
+&"RESET": SubResource("Animation_vgurf"),
+&"attack": SubResource("Animation_kqmod")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pdaqp"]
+radius = 2.970501
+height = 35.37285
+
 [node name="enemy" type="CharacterBody2D" unique_id=261476383]
 collision_layer = 8
-collision_mask = 3
+collision_mask = 11
 script = ExtResource("1_f87vc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=866351397]
@@ -163,6 +357,7 @@ position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_ymh6p")
 animation = &"attack"
 autoplay = "idle"
+frame = 5
 
 [node name="collision" type="CollisionShape2D" parent="." unique_id=358450656]
 position = Vector2(0, 20)
@@ -171,16 +366,39 @@ shape = SubResource("CapsuleShape2D_ymh6p")
 debug_color = Color(1.540184e-06, 0.60436296, 0.6780603, 0.41960785)
 
 [node name="player_detect" parent="." unique_id=879220144 instance=ExtResource("3_8u16h")]
-position = Vector2(-2, 1)
 
 [node name="player_out" type="Timer" parent="." unique_id=503270840]
 wait_time = 3.0
 one_shot = true
 
-[node name="player_detect_move" parent="." unique_id=2130634163 instance=ExtResource("4_b7koy")]
+[node name="player_detect_attack" parent="." unique_id=2130634163 instance=ExtResource("4_b7koy")]
+position = Vector2(0, 9)
+collision_layer = 16
+
+[node name="Attacktimer" type="Timer" parent="." unique_id=660468301]
+
+[node name="HurtAnimation" type="AnimationPlayer" parent="." unique_id=1465229325]
+libraries/ = SubResource("AnimationLibrary_ulb22")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1064871878]
+root_node = NodePath("../sword/attackarea/CollisionShape2D")
+libraries/ = SubResource("AnimationLibrary_qhqle")
+
+[node name="sword" type="Node2D" parent="." unique_id=984491435]
+
+[node name="attackarea" type="Area2D" parent="sword" unique_id=1367263436]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword/attackarea" unique_id=763037761]
+position = Vector2(-37, -22.999998)
+rotation = -0.2244436
+shape = SubResource("CapsuleShape2D_pdaqp")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="player_detect" to="." method="_on_player_detect_body_entered"]
 [connection signal="body_exited" from="player_detect" to="." method="_on_player_detect_body_exited"]
 [connection signal="timeout" from="player_out" to="." method="_on_timer_timeout"]
-[connection signal="body_entered" from="player_detect_move" to="." method="_on_player_detect_for_hit"]
+[connection signal="body_entered" from="player_detect_attack" to="." method="_on_player_detect_for_hit"]
+[connection signal="body_exited" from="player_detect_attack" to="." method="_on_player_detect_for_hit_body_exited"]
+[connection signal="timeout" from="Attacktimer" to="." method="_on_attacktimer_timeout"]

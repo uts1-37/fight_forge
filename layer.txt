@@ -2,16 +2,15 @@
 
 1 : terrain
 2 : player
-3 : enemy
+4 : enemy
+5: enemy_hit_layer
 
 <to-do>
-공격 범위 안에 들어오면 공격 무한대로
-공격 인식 (player)
-공격 받을시 (enemy)
-1. 하트 까임
-2. 빨개짐
-3. 뒤로 밀림
-
 시작화면
 단계별 생존 시간 넣기
 게임오버화면
+기능: 몹 생성, 몹 하트 증가
+base로 돌아오면 기능 업
+
+<attribute>
+https://nyknck.itch.io/fx062 (smoke)
