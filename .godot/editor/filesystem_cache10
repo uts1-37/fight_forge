@@ -1,8 +1,8 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1785162892
+::res://::1786717421
 icon.svg::CompressedTexture2D::1931157397733098364::1784692839::1784692847::1::::<><><>0<>0<>4f71682d10ceca74eebf2be7540f0e7c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-layer.txt::TextFile::431336328520951561::1785160760::0::1::::<><><>0<>0<><>::
-::res://font/::1785162921
+layer.txt::TextFile::-1::1785164489::0::1::::<><><>0<>0<><>::
+::res://font/::1785162922
 BoldPixels.ttf::FontFile::9051356072450700048::1785161459::1785161460::1::::<><><>0<>0<>1600cc9a9ddf6da5ffd57ff28bdbd767<>res://.godot/imported/BoldPixels.ttf-870ad0096890131b022660eda41d73c7.fontdata::
 PixelOperator8-Bold.ttf::FontFile::4891119357901223673::1785162921::1785162922::1::::<><><>0<>0<>0c354efab491d3481da2eb5527139a0b<>res://.godot/imported/PixelOperator8-Bold.ttf-6156fc8e51f5ba50533421c39d436a3b.fontdata::
 PixelOperator8.ttf::FontFile::7905876142672450962::1785162879::1785162893::1::::<><><>0<>0<>9cffb57b9c3a6cd223b79d2e24a3800a<>res://.godot/imported/PixelOperator8.ttf-79831266a6914eeaa6c22e02cee2fd02.fontdata::
@@ -12,13 +12,13 @@ FX001_02.png::CompressedTexture2D::7506954875560478108::1785126122::1785126137::
 FX001_03.png::CompressedTexture2D::3583305359594276240::1785126122::1785126137::1::::<><><>0<>0<>7203a1deea8d73a8f2ee2fe715bcbc59<>res://.godot/imported/FX001_03.png-6618a1cfa15eaca2421f0fd4ba92a1f7.ctex::
 FX001_04.png::CompressedTexture2D::6093881002058944960::1785126122::1785126137::1::::<><><>0<>0<>792beec5a6dbef18557ff7f502d35b7b<>res://.godot/imported/FX001_04.png-4a7064d0313f71e38af65217ecd56a3d.ctex::
 FX001_05.png::CompressedTexture2D::5782404174155916857::1785126122::1785126137::1::::<><><>0<>0<>449c7e1416cd51c9abcdae7b538617ed<>res://.godot/imported/FX001_05.png-d77a091fb988ed79fd954c02cae23e60.ctex::
-::res://scene/::1785162500
+::res://scene/::1785164489
 die_smoke.tscn::PackedScene::6737235112044623677::1785158195::0::1::::<><><>0<>0<><>::uid://dbd3sxcpw4glt::::res://FX001/FX001_01.png<>uid://b0nvd8a2hkyvk::::res://script/die_smoke.gd<>uid://de7opkhu16vk3::::res://FX001/FX001_02.png<>uid://brb1rsg3xfalc::::res://FX001/FX001_03.png<>uid://cs26lhhssv3ls::::res://FX001/FX001_04.png<>uid://conbl73g00226::::res://FX001/FX001_05.png
 enemy.tscn::PackedScene::4706297384368928536::1785159246::0::1::::<><><>0<>0<><>::uid://5mi6aa0n3uqn::::res://script/enemy.gd<>uid://dg0a10y71cx8v::::res://Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png<>uid://ph23qkaueao2::::res://scene/player_detect_move.tscn<>uid://b4bpoixggaxh7::::res://scene/player_attack_boundary.tscn
 enemy_check.tscn::PackedScene::1793719654024091090::1785053366::0::1::::<><><>0<>0<><>::
 hitboundary.tscn::PackedScene::112412095197278987::1785051717::0::1::::<><><>0<>0<><>::
-hud.tscn::PackedScene::7837890967890713509::1785162500::0::1::::<><><>0<>0<><>::uid://d17srn8ldon2g::::res://font/BoldPixels.ttf
-main.tscn::PackedScene::6213747380158730770::1785159898::0::1::::<><><>0<>0<><>::uid://dfvaiyi8eig13::::res://scene/player.tscn<>uid://hqd8v7ocwtps::::res://Tiny Swords (Update 010)/Terrain/Water/Water.png<>uid://csdggxrvbva8y::::res://Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png<>uid://bhb322p43260::::res://Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png<>uid://bmrve0kojwxgc::::res://Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png<>uid://dpavsbpy7rcfg::::res://Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png<>uid://dt1x2ph4qtm3g::::res://Tiny Swords (Update 010)/Terrain/Ground/Shadows.png<>uid://b8b1bbb1ir2mm::::res://scene/enemy.tscn
+hud.tscn::PackedScene::7837890967890713509::1785163620::0::1::::<><><>0<>0<><>::uid://d17srn8ldon2g::::res://font/BoldPixels.ttf
+main.tscn::PackedScene::6213747380158730770::1785164489::0::1::::<><><>0<>0<><>::uid://dfvaiyi8eig13::::res://scene/player.tscn<>uid://hqd8v7ocwtps::::res://Tiny Swords (Update 010)/Terrain/Water/Water.png<>uid://csdggxrvbva8y::::res://Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png<>uid://bhb322p43260::::res://Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png<>uid://bmrve0kojwxgc::::res://Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png<>uid://dpavsbpy7rcfg::::res://Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png<>uid://dt1x2ph4qtm3g::::res://Tiny Swords (Update 010)/Terrain/Ground/Shadows.png
 player.tscn::PackedScene::7553573762879834952::1785161115::0::1::::<><><>0<>0<><>::uid://cg3xe6w5ftw1f::::res://Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png<>uid://c77g2ua8knxp::::res://script/player.gd<>uid://0s5khsg1wi2m::::res://scene/enemy_check.tscn
 player_attack_boundary.tscn::PackedScene::4424897738954225610::1785123056::0::1::::<><><>0<>0<><>::
 player_detect_move.tscn::PackedScene::1068973515731466711::1785055695::0::1::::<><><>0<>0<><>::

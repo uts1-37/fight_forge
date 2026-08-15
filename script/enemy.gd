@@ -12,6 +12,7 @@ extends CharacterBody2D
 #melee attack
 @onready var collision_shape_2d: CollisionShape2D = $sword/attackarea/CollisionShape2D
 @onready var attackarea: Area2D = $sword/attackarea
+
 var hit_target = []
 
 
@@ -132,6 +133,8 @@ func take_damage():
 		var smoke = SMOKE_SCENE.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
+
+		
 		
 	
 

@@ -193,7 +193,7 @@ step = 0.05
 
 [sub_resource type="Animation" id="Animation_1e552"]
 resource_name = "die"
-length = 0.12000000000000001
+length = 0.12
 step = 0.06
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -222,7 +222,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_yvcfn"]
 resource_name = "hurt"
-length = 0.12000000000000001
+length = 0.12
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -345,7 +345,7 @@ _data = {
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pdaqp"]
 radius = 2.970501
-height = 35.37285
+height = 38.827393
 
 [node name="enemy" type="CharacterBody2D" unique_id=261476383]
 collision_layer = 8
@@ -393,6 +393,7 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword/attackarea" unique_id=763037761]
 position = Vector2(-37, -22.999998)
 rotation = -0.2244436
+scale = Vector2(1.251789, 1.4556708)
 shape = SubResource("CapsuleShape2D_pdaqp")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

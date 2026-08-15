@@ -14,6 +14,9 @@ var hit_target = []
 @onready var player: CharacterBody2D = $"."
 @onready var progress_bar: ProgressBar = $ProgressBar
 
+signal die
+
+
 
 func get_input():
 	if is_attacking:
@@ -80,5 +83,6 @@ func take_damage_byenemy():
 		var smoke = SMOKE_SCENE.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
+		die.emit()
 		
 	

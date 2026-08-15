@@ -1,12 +1,14 @@
 [gd_scene format=4 uid="uid://cur8rnkpbso0i"]
 
 [ext_resource type="PackedScene" uid="uid://dfvaiyi8eig13" path="res://scene/player.tscn" id="1_itxqv"]
+[ext_resource type="Script" uid="uid://ck02hwgohp5id" path="res://scene/main.gd" id="1_of57s"]
 [ext_resource type="Texture2D" uid="uid://hqd8v7ocwtps" path="res://Tiny Swords (Update 010)/Terrain/Water/Water.png" id="2_brvut"]
 [ext_resource type="Texture2D" uid="uid://csdggxrvbva8y" path="res://Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="2_v0l8b"]
 [ext_resource type="Texture2D" uid="uid://bhb322p43260" path="res://Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="3_0ha60"]
 [ext_resource type="Texture2D" uid="uid://bmrve0kojwxgc" path="res://Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png" id="4_0ha60"]
 [ext_resource type="Texture2D" uid="uid://dpavsbpy7rcfg" path="res://Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="4_4j5ol"]
 [ext_resource type="Texture2D" uid="uid://dt1x2ph4qtm3g" path="res://Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="7_p1hux"]
+[ext_resource type="PackedScene" uid="uid://djwy6iq0cdhyb" path="res://scene/hud.tscn" id="9_b5f6u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j5ol"]
 texture = ExtResource("2_brvut")
@@ -709,6 +711,7 @@ point_count = 21
 
 [node name="Main" type="Node2D" unique_id=1408033834]
 y_sort_enabled = true
+script = ExtResource("1_of57s")
 
 [node name="player" parent="." unique_id=1506118937 instance=ExtResource("1_itxqv")]
 z_index = 5
@@ -747,5 +750,14 @@ tile_set = SubResource("TileSet_lf0kp")
 curve = SubResource("Curve2D_p1hux")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=320255557]
+unique_name_in_owner = true
 position = Vector2(-58, -1245)
 rotation = 0.33956432
+
+[node name="Enemy" type="Node" parent="." unique_id=1888531416]
+
+[node name="HUD" parent="." unique_id=1559942269 instance=ExtResource("9_b5f6u")]
+
+[connection signal="die" from="player" to="." method="game_over"]
+[connection signal="restart" from="HUD" to="." method="_on_hud_restart"]
+[connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]

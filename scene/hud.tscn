@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://djwy6iq0cdhyb"]
 
+[ext_resource type="Script" uid="uid://017rx8dslls1" path="res://scene/hud.gd" id="1_o8u2p"]
 [ext_resource type="FontFile" uid="uid://d17srn8ldon2g" path="res://font/BoldPixels.ttf" id="1_s3k51"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwfog"]
-bg_color = Color(0, 0.4745098, 0.9843137, 1)
+bg_color = Color(0.006735802, 0.44041124, 0.7806463, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -15,10 +16,10 @@ expand_margin_right = 10.0
 expand_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jfkg"]
-bg_color = Color(0, 0.243431, 0.53076583, 1)
+bg_color = Color(0.0016528822, 0.24402866, 0.45080817, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vaqxc"]
-bg_color = Color(0, 0.24313726, 0.5294118, 1)
+bg_color = Color(0, 0.24313726, 0.4509804, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -28,7 +29,25 @@ expand_margin_top = 7.0
 expand_margin_right = 10.0
 expand_margin_bottom = 7.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8u2p"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvgpj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhyt6"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
 [node name="HUD" type="CanvasLayer" unique_id=1559942269]
+script = ExtResource("1_o8u2p")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=471719429]
 modulate = Color(1, 1, 1, 0.16470589)
@@ -54,6 +73,26 @@ theme_override_font_sizes/font_size = 100
 text = "FIGHT & FORGE"
 autowrap_mode = 2
 
+[node name="Score" type="Label" parent="." unique_id=479191325]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(400, -1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.5
+offset_right = 56.5
+offset_bottom = 179.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("1_s3k51")
+theme_override_font_sizes/font_size = 100
+text = "0
+"
+horizontal_alignment = 1
+
 [node name="Button" type="Button" parent="." unique_id=547451113]
 anchors_preset = 7
 anchor_left = 0.5
@@ -78,10 +117,10 @@ visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -212.5
-offset_top = 250.0
-offset_right = 212.5
-offset_bottom = 338.0
+offset_left = -212.0
+offset_top = 197.0
+offset_right = 213.0
+offset_bottom = 285.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 10
@@ -89,3 +128,73 @@ theme_override_constants/shadow_offset_y = 9
 theme_override_fonts/font = ExtResource("1_s3k51")
 theme_override_font_sizes/font_size = 100
 text = "Game Over"
+
+[node name="EndScore" type="Label" parent="." unique_id=2047066929]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(400, -1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = 325.0
+offset_right = 50.0
+offset_bottom = 504.00006
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("1_s3k51")
+theme_override_font_sizes/font_size = 76
+text = "SCORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EndScore2" type="Label" parent="." unique_id=316219706]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(400, -1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 34.0
+offset_top = 326.0
+offset_right = 223.0
+offset_bottom = 505.00006
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.16008344, 0.119547985, 1, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("1_s3k51")
+theme_override_font_sizes/font_size = 76
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1903075795]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -170.0
+offset_right = 77.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.79607844, 0.23529412, 1)
+theme_override_colors/font_hover_color = Color(0, 0.79607844, 0.23529412, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.79607844, 0.23529412, 1)
+theme_override_fonts/font = ExtResource("1_s3k51")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_o8u2p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pvgpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nhyt6")
+text = "↻"
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_startbutton_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
